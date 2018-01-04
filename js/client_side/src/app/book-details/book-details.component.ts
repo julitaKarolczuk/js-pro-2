@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {Book} from '../model/book';
+import {BooksService} from "../service/books.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-book-details',
@@ -8,14 +10,26 @@ import {Book} from '../model/book';
 })
 export class BookDetailsComponent implements OnInit {
 
-  @Input() book: Book;
+  book: Book;
+  bookId: number;
 
-  constructor() { }
+  constructor(private booksService: BooksService, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
-    
+    this.bookId = +this.route.snapshot.paramMap.get('id');
+    this.getBook();
   }
-  getBook(bookId){
-    
+
+  private getBook() {
+    this.booksService.getBookById(this.bookId).subscribe(book => this.book = book,
+        error => console.log('error get'));
   }
+
+  update() {
+    this.booksService.updateBook(this.bookId, this.book).subscribe(success => this.book = success as Book,
+        error => console.log('error update'));
+  }
+
+
 }

@@ -3,20 +3,18 @@
       <li *ngFor="let author of authors"
         [class.selected]="author === selectedAuthor"
         (click)="onSelect(author)">
-        <span class="badge">{{author.idAuthor}}</span> {{author.firstName}}
+        <span class="badge">{{author.authorId}}</span> {{author.firstName}}
       </li>
     </ul>
-     
-    <div *ngIf="selectedAuhtor">
-     
+
+    <div *ngIf="selectedAuthor">
+
       <h2>{{ selectedAuthor.firstName | uppercase }} Details</h2>
-      <div><span>Id: </span>{{selectedAuthor.id}}</div>
+      <div><span>Id: </span>{{selectedAuthor.authorId}}</div>
       <div>
         <label>Imię:
-          <input [(ngModel)]="selectedAuthor.firstName" placeholder="name">
+          <input [(ngModel)]="selectedAuthor.firstName" name="firstName" placeholder="name">
         </label>
       </div>
-     
-    </div>
 
-    <app-author-detail [author]="selectedAuthor"></app-author-detail>
+    </div>

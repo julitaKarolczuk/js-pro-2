@@ -1,4 +1,4 @@
-<div *ngIf="book">
+<div *ngIf="book; else elseBlock">
 
   <h2>{{ book.title | uppercase }} Details</h2>
   <div>
@@ -11,3 +11,4 @@
   </div>
 
 </div>
+<ng-template #elseBlock>Brak ksiązki o podanym id</ng-template>
