@@ -1,0 +1,12 @@
+<div class="booksList">
+	<ul>
+		<li *ngFor="let book of allBooks">
+			<a (click)="onSelect(book)">{{book.title | uppercase}}</a>
+			<input class="removeButton" type="button" (click)="deleteBook(book)" value="x"/>
+		</li>
+	</ul>
+</div>
+
+<app-book-details [book]="selectedBook"></app-book-details>
+
+

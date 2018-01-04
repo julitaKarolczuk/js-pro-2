@@ -1,0 +1,33 @@
+<div class="mainContainer">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">{{title}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/books">Książki</a>
+                  </li>
+            
+                  <li class="nav-item">
+                    <a class="nav-link " routerLink="/authors">Autorzy</a>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                  <i class="fa fa-3x fa-facebook-official mr-2"></i>
+                  <i class="fa fa-3x fa-instagram mr-2"></i>
+                  <i class="fa fa-3x fa-twitter"></i>
+                </form>
+              </div>
+
+
+      </nav>
+      <div class="itemList">
+        <router-outlet></router-outlet>
+      </div>
+</div>
+<footer>&copy; J&R&A</footer>
+

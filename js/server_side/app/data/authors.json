@@ -1,0 +1,27 @@
+[
+  {
+    "authorId": 1,
+    "firstName": "Jan",
+    "lastName": "Kowalski",
+    "description": "krotki opis o autorze hehe"
+  },
+
+  {
+    "authorId": 2,
+    "firstName": "Hans Christian",
+    "lastName": "Andersen",
+    "description": "krotki opis o Hansie hehe2"
+  },
+  {
+    "authorId": 3,
+    "firstName": "Dante",
+    "lastName": "Alighieri",
+    "description": "krotki opis o Dante hehe3"
+  },
+  {
+    "authorId": 4,
+    "firstName": "Pan",
+    "lastName": "Ktos",
+    "description": "krotki opis o Panie ktosiu hehe4"
+  }
+]

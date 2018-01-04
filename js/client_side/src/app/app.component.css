@@ -1,0 +1,35 @@
+.fa-facebook-official:hover{
+  color: #3b5998;
+  cursor: pointer;
+}
+
+.fa-instagram:hover{
+  color: #cd486b;
+  cursor: pointer;
+}
+
+.fa-twitter:hover{
+  color: #1dcaff;
+  cursor: pointer;
+}
+
+.mainContainer{
+  width: 70%;
+  margin: auto;
+  background-color: lightgray;
+  padding-bottom: 1px;  
+}
+
+.itemList{
+  width: 40%;
+  height: 100%;
+  margin:auto;
+}
+
+footer{
+  background-color: #e6e6e6;
+  width: 70%;
+  margin: auto;
+  text-align: right;
+  padding-right: 2%;
+}

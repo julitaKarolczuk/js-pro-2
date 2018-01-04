@@ -1,0 +1,13 @@
+<div *ngIf="book">
+
+  <h2>{{ book.title | uppercase }} Details</h2>
+  <div>
+    id:  {{book.bookId}}<br/>
+    autorzy: <div *ngFor="let author of book.authors">{{author.firstName}} {{author.lastName}}</div>
+    jezyk: {{book.language}}  <br/>
+    kraj: {{book.country}}  <br/>
+    liczba stron: {{book.pages}}  <br/>
+    wydano: {{book.year}}  <br/>
+  </div>
+
+</div>

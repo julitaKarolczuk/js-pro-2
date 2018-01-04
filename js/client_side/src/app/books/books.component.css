@@ -1,0 +1,32 @@
+.booksList{
+    color: whitesmoke;
+    width: 100%;
+    margin: auto;
+}
+    .booksList ul{
+        margin: 0%;
+        width: 100%;
+        height: 100%;
+        list-style-type: none;
+    }
+
+    .booksList ul li{
+        background-color: #480100;
+        margin: 10px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .booksList ul li a{
+        color: whitesmoke;
+    }
+
+    .booksList ul li a:hover{
+        color: #fffacd;
+        text-decoration-line: none;
+    }
+
+.removeButton{
+    width: 8%;
+}

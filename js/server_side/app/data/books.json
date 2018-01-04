@@ -1,0 +1,56 @@
+[
+  {
+    "bookId": 1,
+    "authors": [
+      {
+        "authorId": 1,
+        "firstName": "Jan",
+        "lastName": "Kowalski",
+        "description": "krotki opis o autorze hehe"
+      },
+      {
+        "authorId": 2,
+        "firstName": "Hans Christian",
+        "lastName": "Andersen",
+        "description": "krotki opis o Hansie hehe2"
+      }
+    ],
+    "country": "Poland",
+    "language": "Poslski",
+    "pages": 210,
+    "title": "tytul po updacie",
+    "year": 2017
+  },
+  {
+    "bookId": 2,
+    "authors": [
+      {
+        "authorId": 2,
+        "firstName": "Hans Christian",
+        "lastName": "Andersen",
+        "description": "krotki opis o Hansie hehe2"
+      }
+    ],
+    "country": "Denmark",
+    "language": "Danish",
+    "pages": 784,
+    "title": "Fairy tales",
+    "year": 1836
+  },
+  {
+    "bookId": 3,
+    "authors": [
+      {
+        "authorId": 3,
+        "firstName": "Dante",
+        "lastName": "Alighieri",
+        "description": "krotki opis o Dante hehe2"
+      }
+    ],
+    "country": "Italy",
+    "language": "Italian",
+    "pages": 928,
+    "title": "The Divine Comedy",
+    "year": 1315
+  }
+]
