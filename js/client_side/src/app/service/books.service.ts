@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Book} from '../model/book';
+import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class BooksService {
@@ -26,7 +27,7 @@ export class BooksService {
   }
 
   deleteBookById(bookId: number){
-    return this.http.delete(this.PATH + '/' + bookId);
+    return this.http.delete(this.PATH + '/' + bookId + '/delete');
   }
 
 }

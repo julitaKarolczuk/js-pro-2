@@ -26,6 +26,6 @@ export class AuthorsService {
   }
 
   deleteAuthorById(authorId: number){
-    return this.http.delete(this.PATH + '/' + authorId);
+    return this.http.delete(this.PATH + '/' + authorId + '/delete');
   }
 }
