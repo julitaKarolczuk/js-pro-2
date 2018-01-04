@@ -1,12 +1,15 @@
 <div class="booksList">
-	<ul>
-		<li *ngFor="let book of allBooks">
-			<a (click)="onSelect(book)">{{book.title | uppercase}}</a>
-			<input class="removeButton" type="button" (click)="deleteBook(book)" value="x"/>
-		</li>
-	</ul>
+  <span class="ui-float-label">
+    <input id="float-input" type="text" [(ngModel)]="filter" size="30" pInputText>
+    <label for="float-input">Filtruj po tytule</label>
+</span>
+  <ul>
+    <li *ngFor="let book of pagedBooks | filterByTitle: filter">
+      <a routerLink="/books/{{book.bookId}}">{{book.title | uppercase}}</a>
+      <button class="btn btn-danger" (click)="deleteBook(book)">Usuń <i class="fa fa-minus-circle"></i></button>
+    </li>
+  </ul>
+  <p-paginator rows="2" totalRecords="{{allBooks.length}}" pageLinkSize="3" (onPageChange)="paginate($event)"></p-paginator>
 </div>
-
-<app-book-details [book]="selectedBook"></app-book-details>
 
 

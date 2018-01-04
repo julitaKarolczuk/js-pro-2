@@ -15,7 +15,7 @@ export class BooksService {
   }
 
   getBookById(bookId: number){
-    return this.http.get(this.PATH + '/' + bookId);
+    return this.http.get<Book>(this.PATH + '/' + bookId);
   }
 
   createBook(book: Book){

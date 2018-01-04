@@ -17,19 +17,16 @@
   width: 70%;
   margin: auto;
   background-color: lightgray;
-  padding-bottom: 1px;  
+  padding-bottom: 1px;
 }
 
 .itemList{
-  width: 40%;
+  width: 50%;
   height: 100%;
   margin:auto;
 }
 
 footer{
   background-color: #e6e6e6;
-  width: 70%;
-  margin: auto;
-  text-align: right;
-  padding-right: 2%;
+  text-align: center;
 }
