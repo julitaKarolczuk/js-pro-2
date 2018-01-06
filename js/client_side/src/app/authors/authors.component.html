@@ -1,20 +1,51 @@
-    <h2>My Authors</h2>
-    <ul class="authors">
-      <li *ngFor="let author of authors"
-        [class.selected]="author === selectedAuthor"
-        (click)="onSelect(author)">
-        <span class="badge">{{author.authorId}}</span> {{author.firstName}}
-      </li>
-    </ul>
+<p-growl></p-growl>
+<h2>My Authors</h2>
 
-    <div *ngIf="selectedAuthor">
+<p-fieldset collapsed="false">
+  <p-header>Dodaj Autora</p-header>
 
-      <h2>{{ selectedAuthor.firstName | uppercase }} Details</h2>
-      <div><span>Id: </span>{{selectedAuthor.authorId}}</div>
-      <div>
-        <label>Imię:
-          <input [(ngModel)]="selectedAuthor.firstName" name="firstName" placeholder="name">
-        </label>
+  <div class="col-sm-4 mr-auto ml-auto">
+    <form #authorForm="ngForm" (ngSubmit)="createAuthor()">
+
+      <div class="mt-4">
+          <span class="ui-float-label">
+            <input type="text" id="firstName-input" [(ngModel)]="authorToAdd.firstName" name="firstName" required pInputText>
+            <label for="firstName-input">Imię</label>
+          </span>
       </div>
 
-    </div>
+      <div class="mt-4">
+          <span class="ui-float-label">
+            <input type="text" id="lastName-input" [(ngModel)]="authorToAdd.lastName" name="lastName" required pInputText>
+            <label for="lastName-input">Nazwisko</label>
+          </span>
+      </div>
+
+      <div class="mt-4">
+        <textarea placeholder="krótki opis..." pInputTextarea [(ngModel)]="authorToAdd.description" name="description" required></textarea>
+      </div>
+
+      <div class="text-center mt-3">
+        <button class="btn btn-success" type="submit" [disabled]="authorForm.invalid" >Dodaj autora <i class="fa fa-check-circle"></i></button>
+      </div>
+
+    </form>
+  </div>
+</p-fieldset>
+
+<span class="ui-float-label mt-5">
+    <input id="filter-input" type="text" [(ngModel)]="filter" (keyup)="filterKeyUp()" size="30" pInputText>
+    <label for="filter-input">Szukaj...</label>
+</span>
+
+<ul class="authors">
+  <li *ngFor="let author of pagedAuthors | filterAuthor: filter">
+    <a routerLink="/authors/{{author.authorId}}">
+      <span class="badge">{{author.authorId}}</span> {{author.firstName}} {{author.lastName}}
+    </a>
+    <button class="btn btn-danger" (click)="deleteAuthor(author.authorId)">Usuń <i class="fa fa-minus-circle"></i></button>
+  </li>
+</ul>
+<p-paginator rows="{{paginatorSettings.rows}}" totalRecords="{{paginatorSettings.totalRecords}}"
+             pageLinkSize="{{paginatorSettings.pageLinkSize}}" (onPageChange)="paginate($event)">
+</p-paginator>

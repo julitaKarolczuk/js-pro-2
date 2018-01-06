@@ -1,4 +1,36 @@
-<div *ngIf="author">
+<p-growl></p-growl>
+<p-fieldset collapsed="false">
+  <p-header>Edytuj Autora</p-header>
+
+  <div class="col-sm-4 mr-auto ml-auto">
+    <form #authorForm="ngForm" (ngSubmit)="updateAuthor()">
+
+      <div class="mt-4">
+          <span class="ui-float-label">
+            <input type="text" id="firstName-input" [(ngModel)]="editedAuthor.firstName" name="firstName" required pInputText>
+            <label for="firstName-input">Imię</label>
+          </span>
+      </div>
+
+      <div class="mt-4">
+          <span class="ui-float-label">
+            <input type="text" id="lastName-input" [(ngModel)]="editedAuthor.lastName" name="lastName" required pInputText>
+            <label for="lastName-input">Nazwisko</label>
+          </span>
+      </div>
+
+      <div class="mt-4">
+        <textarea placeholder="krótki opis..." pInputTextarea [(ngModel)]="editedAuthor.description" name="description" required></textarea>
+      </div>
+
+      <div class="text-center mt-3">
+        <button class="btn btn-success" type="submit" [disabled]="authorForm.invalid" >Dodaj autora <i class="fa fa-check-circle"></i></button>
+      </div>
+
+    </form>
+  </div>
+</p-fieldset>
+<div *ngIf="author; else elseBlock">
 
   <h2>{{ author.lastName}} Details</h2>
   <div>
@@ -9,3 +41,7 @@
   </div>
 
 </div>
+
+<ng-template #elseBlock>
+  Brak autora o podanym id
+</ng-template>
