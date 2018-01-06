@@ -11,12 +11,14 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {
-  DataTableModule, FieldsetModule, InputMaskModule, InputTextModule, MultiSelectModule, PaginatorModule,
+  DataTableModule, FieldsetModule, GrowlModule, InputMaskModule, InputTextModule, MultiSelectModule, PaginatorModule,
   SharedModule, SliderModule
 } from 'primeng/primeng';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { FilterByTitlePipe } from './pipe/filter-by-title.pipe';
 import {AuthorsService} from "./service/authors.service";
+import {MessageService} from "primeng/components/common/messageservice";
+import {CustomMessageService} from "./service/custom-message.service";
 
 
 @NgModule({
@@ -40,12 +42,15 @@ import {AuthorsService} from "./service/authors.service";
     MultiSelectModule,
     InputMaskModule,
     FieldsetModule,
-    SliderModule
+    SliderModule,
+    GrowlModule
   ],
   providers: [
     HttpClientModule,
     BooksService,
-    AuthorsService
+    AuthorsService,
+    CustomMessageService,
+    MessageService
   ],
   bootstrap: [AppComponent]
 })

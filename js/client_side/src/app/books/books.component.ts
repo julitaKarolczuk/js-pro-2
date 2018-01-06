@@ -7,6 +7,7 @@ import {AuthorsService} from "../service/authors.service";
 import {SelectItem} from "primeng/primeng";
 import {isNullOrUndefined, isUndefined} from "util";
 import {FormGroup} from "@angular/forms";
+import {CustomMessageService} from "../service/custom-message.service";
 
 @Component({
   selector: 'app-books',
@@ -35,7 +36,10 @@ export class BooksComponent implements OnInit {
   @ViewChild('bookForm')
   bookForm: FormGroup;
 
-  constructor (private booksService: BooksService, private filterPipe : FilterByTitlePipe, private authorsService: AuthorsService) {
+  constructor (private booksService: BooksService,
+               private filterPipe : FilterByTitlePipe,
+               private authorsService: AuthorsService,
+               private messageService: CustomMessageService) {
     this.getAuthors();
   }
 
@@ -53,7 +57,8 @@ export class BooksComponent implements OnInit {
     this.booksService.createBook(this.bookToAdd).subscribe(success => {
       this.getBooks();
       this.bookForm.reset();
-    }, error => console.log('Błąd podczas dodawania książki'))
+      this.messageService.showSuccessMessage('Dodano pomyślnie')
+    }, error => this.messageService.showErrorMessage('Błąd podczas dodawania'));
   }
 
   getBooks(){
@@ -62,7 +67,7 @@ export class BooksComponent implements OnInit {
 	    this.pagedBooks = this.allBooks.slice(0, this.paginatorSettings.rows);
 	    this.filteredBooks = this.allBooks;
 	    this.setPaginatorSettings(this.allBooks.length);
-    }, error => console.log("blad"));
+    }, error => this.messageService.showErrorMessage('Błąd podczas dodawania'));
   }
 
   setPaginatorSettings(totalRecords: number = this.allBooks.length){
@@ -70,7 +75,10 @@ export class BooksComponent implements OnInit {
   }
 
   deleteBook(book:Book):void{
-    this.booksService.deleteBookById(book.bookId).subscribe( (data) => {this.getBooks()}, error => console.log("blad"));
+    this.booksService.deleteBookById(book.bookId).subscribe( (data) => {
+      this.getBooks();
+      this.messageService.showSuccessMessage('Usunięto pomyślnie.')
+    }, error => this.messageService.showErrorMessage('Błąd podczas usuwania.'));
   }
 
   paginate(event){
