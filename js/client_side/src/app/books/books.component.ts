@@ -19,7 +19,7 @@ export class BooksComponent implements OnInit {
 
   allBooks: Book[]=[];
 
-  pagedBooks: Book [];
+  pagedBooks: Book [] = [];
 
   filteredBooks: Book[];
 
