@@ -19,6 +19,7 @@ import { FilterByTitlePipe } from './pipe/filter-by-title.pipe';
 import {AuthorsService} from "./service/authors.service";
 import {MessageService} from "primeng/components/common/messageservice";
 import {CustomMessageService} from "./service/custom-message.service";
+import { FilterAuthorPipe } from './pipe/filter-author.pipe';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {CustomMessageService} from "./service/custom-message.service";
     BookDetailsComponent,
     AuthorsComponent,
     AuthorDetailsComponent,
-    FilterByTitlePipe
+    FilterByTitlePipe,
+    FilterAuthorPipe
   ],
   imports: [
     BrowserModule,
