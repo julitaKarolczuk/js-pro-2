@@ -59,7 +59,10 @@
   <h2>{{ book.title | uppercase }} Details</h2>
   <div>
     id:  {{book.bookId}}<br/>
-    autorzy: <div *ngFor="let author of book.authors">{{author.firstName}} {{author.lastName}}</div>
+    autorzy:
+    <div *ngFor="let author of book.authors">
+      <a routerLink="/authors/{{author.authorId}}" title="sprawdź szczegóły"> {{author.firstName}} {{author.lastName}}</a>
+    </div>
     jezyk: {{book.language}}  <br/>
     kraj: {{book.country}}  <br/>
     liczba stron: {{book.pages}}  <br/>
