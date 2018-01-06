@@ -1,15 +1,73 @@
-<div class="booksList">
-  <span class="ui-float-label">
-    <input id="float-input" type="text" [(ngModel)]="filter" size="30" pInputText>
-    <label for="float-input">Filtruj po tytule</label>
-</span>
+<div class="booksList mt-4 mb-4">
+  <p-fieldset [collapsed]=isCollapsed>
+    <p-header>Dodaj książkę</p-header>
+
+    <div class="col-sm-4 mr-auto ml-auto">
+      <form #bookForm="ngForm" (ngSubmit)="createBook()">
+
+        <div class="mt-4">
+          <span class="ui-float-label">
+            <input type="text" id="title-input"[(ngModel)]="bookToAdd.title" name="title" required pInputText>
+            <label for="title-input">Ttytuł</label>
+          </span>
+        </div>
+
+        <div class="mt-4">
+          <p-multiSelect [options]="authorsSelect" defaultLabel="Wybierz autorów" [panelStyle]="{minWidth:'20px'}"
+                         [(ngModel)]="bookToAdd.authors" name="auhtors" ></p-multiSelect>
+        </div>
+
+        <div class="mt-4">
+          <span class="ui-float-label">
+            <input type="text" id="country-input"[(ngModel)]="bookToAdd.country" name="country" required pInputText>
+            <label for="country-input">Kraj</label>
+          </span>
+        </div>
+
+        <div class="mt-4">
+          <span class="ui-float-label">
+            <input type="text" id="language-input"[(ngModel)]="bookToAdd.language" name="language" required pInputText>
+            <label for="language-input">Język</label>
+          </span>
+        </div>
+
+        <div class="mt-4">
+          <span class="ui-float-label">
+            <input type="text" id="pages-input"[(ngModel)]="bookToAdd.pages" name="pages" pInputText disabled required>
+            <label for="pages-input">Liczba stron</label>
+          </span>
+          <p-slider [(ngModel)]="bookToAdd.pages" [min]="1" [max]="2000" name="pages" [style]="{'width':'200px'}"></p-slider>
+        </div>
+
+        <div class="mt-4">
+          <span class="ui-float-label">
+            <input type="text" id="year-input"[(ngModel)]="bookToAdd.year" name="year" pInputText disabled required>
+            <label for="year-input">Rok wydania</label>
+          </span>
+          <p-slider [(ngModel)]="bookToAdd.year" [min]="1" [max]="2018" name="year" [style]="{'width':'200px'}"></p-slider>
+        </div>
+
+        <div class="text-center mt-3">
+          <button class="btn btn-success" type="submit" [disabled]="bookForm.invalid || isInvalid()" >Dodaj książkę <i class="fa fa-check-circle"></i></button>
+        </div>
+
+      </form>
+    </div>
+  </p-fieldset>
+
+  <span class="ui-float-label mt-5">
+    <input id="filter-input" type="text" [(ngModel)]="filter" (keyup)="filterBooks()" size="30" pInputText>
+    <label for="filter-input">Filtruj po tytule</label>
+  </span>
   <ul>
     <li *ngFor="let book of pagedBooks | filterByTitle: filter">
       <a routerLink="/books/{{book.bookId}}">{{book.title | uppercase}}</a>
       <button class="btn btn-danger" (click)="deleteBook(book)">Usuń <i class="fa fa-minus-circle"></i></button>
     </li>
   </ul>
-  <p-paginator rows="2" totalRecords="{{allBooks.length}}" pageLinkSize="3" (onPageChange)="paginate($event)"></p-paginator>
+  <p-paginator rows="{{paginatorSettings.rows}}" totalRecords="{{paginatorSettings.totalRecords}}"
+               pageLinkSize="{{paginatorSettings.pageLinkSize}}" (onPageChange)="paginate($event)">
+  </p-paginator>
 </div>
 
 

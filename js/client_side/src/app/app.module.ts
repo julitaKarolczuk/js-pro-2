@@ -10,9 +10,13 @@ import { AuthorDetailsComponent } from './author-details/author-details.componen
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
-import {DataTableModule, InputTextModule, PaginatorModule, SharedModule} from 'primeng/primeng';
+import {
+  DataTableModule, FieldsetModule, InputMaskModule, InputTextModule, MultiSelectModule, PaginatorModule,
+  SharedModule, SliderModule
+} from 'primeng/primeng';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { FilterByTitlePipe } from './pipe/filter-by-title.pipe';
+import {AuthorsService} from "./service/authors.service";
 
 
 @NgModule({
@@ -32,11 +36,16 @@ import { FilterByTitlePipe } from './pipe/filter-by-title.pipe';
     RouterModule,
     InputTextModule,
     BrowserAnimationsModule,
-    PaginatorModule
+    PaginatorModule,
+    MultiSelectModule,
+    InputMaskModule,
+    FieldsetModule,
+    SliderModule
   ],
   providers: [
     HttpClientModule,
-    BooksService
+    BooksService,
+    AuthorsService
   ],
   bootstrap: [AppComponent]
 })
