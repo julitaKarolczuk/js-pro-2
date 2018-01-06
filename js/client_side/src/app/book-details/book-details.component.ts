@@ -16,6 +16,8 @@ export class BookDetailsComponent implements OnInit {
 
   book: Book;
 
+  editedBook: Book = new Book();
+
   bookId: number;
 
   authorsSelect: SelectItem[] = [];
@@ -32,6 +34,7 @@ export class BookDetailsComponent implements OnInit {
   private getBook() {
     this.booksService.getBookById(this.bookId).subscribe(book => {
         this.book = book;
+        this.editedBook = Book.clone(this.book);
       },
         error => console.log('error get'));
   }
@@ -43,8 +46,9 @@ export class BookDetailsComponent implements OnInit {
   }
 
   updateBook() {
-    this.booksService.updateBook(this.bookId, this.book).subscribe(success => {
+    this.booksService.updateBook(this.bookId, this.editedBook).subscribe(success => {
       this.book = success as Book;
+      this.editedBook = Book.clone(this.book);
       this.messageService.showSuccessMessage('Zaktualizowano pomyślnie');
     },
         error => console.log('error update'));

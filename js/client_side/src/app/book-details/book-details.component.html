@@ -8,44 +8,44 @@
 
         <div class="mt-4">
           <span class="ui-float-label">
-            <input type="text" id="title-input"[(ngModel)]="book.title" name="title" required pInputText>
+            <input type="text" id="title-input"[(ngModel)]="editedBook.title" name="title" required pInputText>
             <label for="title-input">Ttytuł</label>
           </span>
         </div>
 
         <div class="mt-4">
           <p-multiSelect [options]="authorsSelect" defaultLabel="Wybierz autorów" [panelStyle]="{minWidth:'20px'}"
-                         [(ngModel)]="book.authors" name="auhtors" ></p-multiSelect>
+                         [(ngModel)]="editedBook.authors" name="auhtors" ></p-multiSelect>
         </div>
 
         <div class="mt-4">
           <span class="ui-float-label">
-            <input type="text" id="country-input"[(ngModel)]="book.country" name="country" required pInputText>
+            <input type="text" id="country-input"[(ngModel)]="editedBook.country" name="country" required pInputText>
             <label for="country-input">Kraj</label>
           </span>
         </div>
 
         <div class="mt-4">
           <span class="ui-float-label">
-            <input type="text" id="language-input"[(ngModel)]="book.language" name="language" required pInputText>
+            <input type="text" id="language-input"[(ngModel)]="editedBook.language" name="language" required pInputText>
             <label for="language-input">Język</label>
           </span>
         </div>
 
         <div class="mt-4">
           <span class="ui-float-label">
-            <input type="text" id="pages-input"[(ngModel)]="book.pages" name="pages" pInputText disabled required>
+            <input type="text" id="pages-input"[(ngModel)]="editedBook.pages" name="pages" pInputText disabled required>
             <label for="pages-input">Liczba stron</label>
           </span>
-          <p-slider [(ngModel)]="book.pages" [min]="1" [max]="2000" name="pages" [style]="{'width':'200px'}"></p-slider>
+          <p-slider [(ngModel)]="editedBook.pages" [min]="1" [max]="2000" name="pages" [style]="{'width':'200px'}"></p-slider>
         </div>
 
         <div class="mt-4">
           <span class="ui-float-label">
-            <input type="text" id="year-input"[(ngModel)]="book.year" name="year" pInputText disabled required>
+            <input type="text" id="year-input"[(ngModel)]="editedBook.year" name="year" pInputText disabled required>
             <label for="year-input">Rok wydania</label>
           </span>
-          <p-slider [(ngModel)]="book.year" [min]="1" [max]="2018" name="year" [style]="{'width':'200px'}"></p-slider>
+          <p-slider [(ngModel)]="editedBook.year" [min]="1" [max]="2018" name="year" [style]="{'width':'200px'}"></p-slider>
         </div>
 
         <div class="text-center mt-3">
