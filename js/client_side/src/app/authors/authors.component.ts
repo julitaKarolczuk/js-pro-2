@@ -18,8 +18,6 @@ export class AuthorsComponent implements OnInit {
 
   filteredAuthor: Author[] = [];
 
-  selectedAuthor: Author;
-
   authorToAdd: Author = new Author();
 
   pagedAuthors: Author [] = [];
