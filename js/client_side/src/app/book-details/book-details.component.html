@@ -1,4 +1,5 @@
 <p-growl></p-growl>
+<h2 class="title">Szczegóły</h2>
 <div *ngIf="book; else elseBlock" class="mt-4">
   <p-fieldset collapsed="false">
     <p-header>Edytuj książkę</p-header>
@@ -56,18 +57,38 @@
     </div>
   </p-fieldset>
 
-  <h2>{{ book.title | uppercase }} Details</h2>
-  <div>
-    id:  {{book.bookId}}<br/>
-    autorzy:
-    <div *ngFor="let author of book.authors">
-      <a routerLink="/authors/{{author.authorId}}" title="sprawdź szczegóły"> {{author.firstName}} {{author.lastName}}</a>
-    </div>
-    jezyk: {{book.language}}  <br/>
-    kraj: {{book.country}}  <br/>
-    liczba stron: {{book.pages}}  <br/>
-    wydano: {{book.year}}  <br/>
-  </div>
+        <table class = "table space tabel-responsive">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col" colspan="2" class="nag">{{book.title | uppercase}} Szczegóły</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>ID:</th>
+              <th>{{book.bookId}}</th>
+            </tr>
+            <tr>
+              <th>Autorzy: </th>
+              <th *ngFor="let author of book.authors"> <a routerLink="/authors/{{author.authorId}}" title="Sprawdź szczegóły"> {{author.firstName}} {{author.lastName}}</a></th>
+            </tr>
+            <tr>
+              <th>Język:</th>
+              <th>{{book.language}}</th>
+            </tr>
+            <tr>
+              <th>Kraj:</th>
+              <th>{{book.country}}</th>
+            </tr>
+            <tr>
+              <th>Liczba stron:</th>
+              <th>{{book.pages}}</th>
+            </tr>
+            <tr>
+              <th>Rok wydania:</th>
+              <th>{{book.year}}</th>
+            </tr>
 
-</div>
+          </tbody> 
+          </table> 
 <ng-template #elseBlock>Brak ksiązki o podanym id</ng-template>

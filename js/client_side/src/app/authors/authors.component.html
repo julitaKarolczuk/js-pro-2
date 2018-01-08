@@ -1,8 +1,8 @@
 <p-growl></p-growl>
-<h2>My Authors</h2>
+<h2 class="title">Autorzy</h2>
 
 <p-fieldset collapsed="false">
-  <p-header>Dodaj Autora</p-header>
+  <p-header class="adding">Dodaj Autora</p-header>
 
   <div class="col-sm-4 mr-auto ml-auto">
     <form #authorForm="ngForm" (ngSubmit)="createAuthor()">
@@ -14,6 +14,7 @@
           </span>
       </div>
 
+
       <div class="mt-4">
           <span class="ui-float-label">
             <input type="text" id="lastName-input" [(ngModel)]="authorToAdd.lastName" name="lastName" required pInputText>
@@ -22,7 +23,7 @@
       </div>
 
       <div class="mt-4">
-        <textarea placeholder="krótki opis..." pInputTextarea [(ngModel)]="authorToAdd.description" name="description" required></textarea>
+        <textarea placeholder="Krótki opis..." pInputTextarea [(ngModel)]="authorToAdd.description" name="description" required></textarea>
       </div>
 
       <div class="text-center mt-3">
@@ -43,7 +44,7 @@
     <a routerLink="/authors/{{author.authorId}}">
       <span class="badge">{{author.authorId}}</span> {{author.firstName}} {{author.lastName}}
     </a>
-    <button class="btn btn-danger" (click)="deleteAuthor(author.authorId)">Usuń <i class="fa fa-minus-circle"></i></button>
+    <button class="btn btn-danger pull-right" (click)="deleteAuthor(author.authorId)">Usuń <i class="fa fa-minus-circle"></i></button>
   </li>
 </ul>
 <p-paginator rows="{{paginatorSettings.rows}}" totalRecords="{{paginatorSettings.totalRecords}}"

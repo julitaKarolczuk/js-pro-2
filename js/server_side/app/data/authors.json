@@ -1,27 +1,69 @@
 [
   {
     "authorId": 1,
-    "firstName": "Jan",
-    "lastName": "Kowalski",
-    "description": "krotki opis o autorze hehe"
-  },
-
-  {
-    "authorId": 2,
     "firstName": "Hans Christian",
     "lastName": "Andersen",
-    "description": "krotki opis o Hansie hehe2"
+    "description": "Duński pisarz i poeta, najbardziej znany ze swej twórczości baśniopisarskiej. "
+  },
+  {
+    "authorId": 2,
+    "firstName": "Dante",
+    "lastName": "Alighieri",
+    "description": "Włoski poeta, filozof i polityk. Jego najwybitniejszym dziełem jest poemat Boska komedia, uważany za arcydzieło literatury światowej i szczytowe osiągnięcie literatury średniowieczne"
   },
   {
     "authorId": 3,
-    "firstName": "Dante",
-    "lastName": "Alighieri",
-    "description": "krotki opis o Dante hehe3"
+    "firstName": "Maria",
+    "lastName": "Konopnicka",
+    "description": "Polska poetka i nowelistka okresu realizmu, krytyk literacki, publicystka i tłumaczka"
   },
   {
     "authorId": 4,
-    "firstName": "Pan",
-    "lastName": "Ktos",
-    "description": "krotki opis o Panie ktosiu hehe4"
+    "firstName": "Joanne",
+    "lastName": "Rowling",
+    "description": "Właściwie J.K.Rowling - brytyjska pisarka, autorka serii Harry Potter. Z wykształcenia filolog klasyczny."
+  },
+  {
+    "authorId": 5,
+    "firstName": "Dan",
+    "lastName": "Brown",
+    "description": "Amerykański pisarz, autor powieści sensacyjnych, m.in. głośnej powieści Kod Leonarda da Vinci."
+  },
+  {
+    "authorId": 6,
+    "firstName": "Rick",
+    "lastName": "Riordan",
+    "description": "To twórca popularnych wśród młodzieży książek fantasy. Patent na sukces znalazł w uwspółcześnieniu mitologii greckiej."
+  },
+  {
+    "authorId": 7,
+    "firstName": "John",
+    "lastName": "Green",
+    "description": "Specjalizuje się w literaturze młodzieżowej. Powieści Greena cały czas zdobywają kolejnych nowych czytelników."
+  },
+  {
+    "authorId": 8,
+    "firstName": "Paula",
+    "lastName": "Hawkins",
+    "description": "Studiowała filozofię, nauki polityczne i ekonomię na Uniwersytecie Oksfordzkim. W październiku do kin trafi film na podstawie jej książki"
+  },
+  {
+    "authorId": 9,
+    "firstName": "David",
+    "lastName": "Sawyer McFarland",
+    "description": "Od 1995 roku zajmuje się tworzeniem stron internetowych. Jest prezesem firmy Sawyer McFarland Media."
+  },
+   {
+    "authorId": 10,
+    "firstName": "Damian",
+    "lastName": "Wielgosik",
+    "description": "Założyciel i trener JavaScript w Functionite. Wcześniej m.in. programista front-end w Roche i Nokii. Organizator największej konferencji front-endowej w Europie Środkowej - Front-Trends oraz założyciel ruchu meet.js - darmowych meetupów, które odbywają się dziś w 8 miastach w Polsce."
+  },
+   {
+    "authorId": 11,
+    "firstName": "Mark",
+    "lastName": "Twain",
+    "description": "Pisarz którego możemy usunąć bo nie przypisana jest do niego żadna książka."
   }
+
 ]

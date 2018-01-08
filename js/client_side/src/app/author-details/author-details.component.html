@@ -1,6 +1,7 @@
 <p-growl></p-growl>
+<h2 class="title"> Szczegóły</h2>
 <p-fieldset collapsed="false">
-  <p-header>Edytuj Autora</p-header>
+  <p-header class="edition">Edytuj Autora</p-header>
 
   <div class="col-sm-4 mr-auto ml-auto">
     <form #authorForm="ngForm" (ngSubmit)="updateAuthor()">
@@ -20,11 +21,11 @@
       </div>
 
       <div class="mt-4">
-        <textarea placeholder="krótki opis..." pInputTextarea [(ngModel)]="editedAuthor.description" name="description" required></textarea>
+        <textarea placeholder="Krótki opis..." pInputTextarea [(ngModel)]="editedAuthor.description" name="description" required></textarea>
       </div>
 
       <div class="text-center mt-3">
-        <button class="btn btn-success" type="submit" [disabled]="authorForm.invalid" >Dodaj autora <i class="fa fa-check-circle"></i></button>
+        <button class="btn btn-success" type="submit" [disabled]="authorForm.invalid" >Zatwierdź zmiany<i class="fa fa-check-circle"></i></button>
       </div>
 
     </form>
@@ -32,13 +33,39 @@
 </p-fieldset>
 <div *ngIf="author; else elseBlock">
 
-  <h2>{{ author.lastName}} Details</h2>
-  <div>
-    Id:  {{author.authorId}}<br/>
-    Imię: {{author.firstName}}
-    Nazwisko:{{author.lastName}}  <br/>
-    Opis: {{author.description}}  <br/>
-  </div>
+ <div class="container container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col1">
+  <table class="table space tabel-responsive size">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" colspan="2" class="nag">{{author.lastName}} Szczegóły</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ID:</th>
+      <th>{{author.authorId}}</th>
+    </tr>
+    <tr>
+      <th>Imię:</th>
+      <th>{{author.firstName}}</th>
+    </tr>
+    <tr>
+      <th>Nazwisko:</th>
+      <th>{{author.lastName}}</th>
+    </tr>
+    <tr>
+      <th>Opis:</th>
+      <th>{{author.description}}</th>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="col-xs-12 col-sm-6 col1">
+<img src="\js\client_side\src\app\author-details\writer-logo.png" alt=" tu powinien być obrazek"/>
+</div>
+</div>
 
 </div>
 

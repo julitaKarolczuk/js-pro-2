@@ -3,54 +3,192 @@
     "bookId": 1,
     "authors": [
       {
-        "authorId": 1,
-        "firstName": "Jan",
-        "lastName": "Kowalski",
-        "description": "krotki opis o autorze hehe"
-      },
-      {
-        "authorId": 2,
-        "firstName": "Hans Christian",
-        "lastName": "Andersen",
-        "description": "krotki opis o Hansie hehe2"
+      "authorId": 1,
+      "firstName": "Hans Christian",
+      "lastName": "Andersen",
+      "description": "Duński pisarz i poeta, najbardziej znany ze swej twórczości baśniopisarskiej. "
       }
     ],
-    "country": "Poland",
-    "language": "Poslski",
+    "country": "Denmark",
+    "language": "Polski",
     "pages": 210,
-    "title": "tytul po updacie",
+    "title": "Baśnie",
     "year": 2017
   },
   {
     "bookId": 2,
     "authors": [
       {
-        "authorId": 2,
-        "firstName": "Hans Christian",
-        "lastName": "Andersen",
-        "description": "krotki opis o Hansie hehe2"
+      "authorId": 1,
+      "firstName": "Hans Christian",
+      "lastName": "Andersen",
+      "description": "Duński pisarz i poeta, najbardziej znany ze swej twórczości baśniopisarskiej. "
       }
     ],
     "country": "Denmark",
     "language": "Danish",
     "pages": 784,
-    "title": "Fairy tales",
+    "title": "Eventyr",
     "year": 1836
   },
   {
     "bookId": 3,
     "authors": [
       {
-        "authorId": 3,
-        "firstName": "Dante",
-        "lastName": "Alighieri",
-        "description": "krotki opis o Dante hehe2"
+      "authorId": 2,
+      "firstName": "Dante",
+      "lastName": "Alighieri",
+      "description": "Włoski poeta, filozof i polityk. Jego najwybitniejszym dziełem jest poemat Boska komedia, uważany za arcydzieło literatury światowej i szczytowe osiągnięcie literatury średniowieczne"
       }
     ],
     "country": "Italy",
     "language": "Italian",
     "pages": 928,
-    "title": "The Divine Comedy",
+    "title": "Divina Commedia",
     "year": 1315
+  },
+    {
+    "bookId": 4,
+    "authors": [
+      {
+      "authorId": 3,
+      "firstName": "Maria",
+      "lastName": "Konopnicka",
+      "description": "Polska poetka i nowelistka okresu realizmu, krytyk literacki, publicystka i tłumaczka"
+      }
+    ],
+    "country": "Polska",
+    "language": "Polski",
+    "pages": 450,
+    "title": "Cztery Nowele",
+    "year": 1836
+  },
+  {
+    "bookId": 4,
+    "authors": [
+      {
+      "authorId": 4,
+      "firstName": "Joanne",
+      "lastName": "Rowling",
+      "description": "Właściwie J.K.Rowling - brytyjska pisarka, autorka serii Harry Potter. Z wykształcenia filolog klasyczny."
+      }
+    ],
+    "country": "England",
+    "language": "Polski",
+    "pages": 928,
+    "title": "Harry Potter i czara ognia",
+    "year": 2010
+  },
+    {
+    "bookId": 5,
+    "authors": [
+      {
+      "authorId": 5,
+      "firstName": "Dan",
+      "lastName": "Brown",
+      "description": "Amerykański pisarz, autor powieści sensacyjnych, m.in. głośnej powieści Kod Leonarda da Vinci."
+      }
+    ],
+    "country": "USA",
+    "language": "Polski",
+    "pages": 784,
+    "title": "Kod Leonarda da Vinci",
+    "year": 2017
+  },
+  {
+    "bookId": 6,
+    "authors": [
+      {
+      "authorId": 6,
+      "firstName": "Rick",
+      "lastName": "Riordan",
+      "description": "To twórca popularnych wśród młodzieży książek fantasy. Patent na sukces znalazł w uwspółcześnieniu mitologii greckiej."
+      }
+    ],
+    "country": "USA",
+    "language": "English",
+    "pages": 328,
+    "title": "The Last Olympian",
+    "year": 2012
+  },
+    {
+    "bookId": 7,
+    "authors": [
+      {
+      "authorId": 7,
+      "firstName": "John",
+      "lastName": "Green",
+      "description": "Specjalizuje się w literaturze młodzieżowej. Powieści Greena cały czas zdobywają kolejnych nowych czytelników."
+      }
+    ],
+    "country": "USA",
+    "language": "Polski",
+    "pages": 204,
+    "title": "Gwiazd naszych wina",
+    "year": 2012
+  },
+  {
+    "bookId": 8,
+    "authors": [
+      {
+      "authorId": 8,
+      "firstName": "Paula",
+      "lastName": "Hawkins",
+      "description": "Studiowała filozofię, nauki polityczne i ekonomię na Uniwersytecie Oksfordzkim. W październiku do kin trafi film na podstawie jej książki"
+      }
+    ],
+    "country": "England",
+    "language": "English",
+    "pages": 348,
+    "title": "The Girl with the Dragon Tattoo",
+    "year": 2011
+  },
+  {
+    "bookId": 9,
+    "authors": [
+      {
+      "authorId": 9,
+      "firstName": "David",
+      "lastName": "Sawyer McFarland",
+      "description": "Od 1995 roku zajmuje się tworzeniem stron internetowych. Jest prezesem firmy Sawyer McFarland Media."
+      }
+    ],
+    "country": "USA",
+    "language": "Polski",
+    "pages": 456,
+    "title": "CSS3. Nieoficjalny Podręcznik",
+    "year": 2012
+  },
+  {
+    "bookId": 10,
+    "authors": [
+      {
+      "authorId": 10,
+    "firstName": "Damian",
+    "lastName": "Wielgosik",
+    "description": "Założyciel i trener JavaScript w Functionite. Wcześniej m.in. programista front-end w Roche i Nokii. Organizator największej konferencji front-endowej w Europie Środkowej - Front-Trends oraz założyciel ruchu meet.js - darmowych meetupów, które odbywają się dziś w 8 miastach w Polsce."
   }
+    ],
+    "country": "Polska",
+    "language": "Polski",
+    "pages": 348,
+    "title": "Moja pierwsza strona w HTML5 i CSS3",
+    "year": 2016
+  },
+  {
+    "bookId": 9,
+    "authors": [
+      {
+      "authorId": 9,
+      "firstName": "David",
+      "lastName": "Sawyer McFarland",
+      "description": "Od 1995 roku zajmuje się tworzeniem stron internetowych. Jest prezesem firmy Sawyer McFarland Media."
+      }
+    ],
+    "country": "USA",
+    "language": "Polski",
+    "pages": 456,
+    "title": "JavaScript i jQuery. Nieoficjalny Podręcznik",
+    "year": 2012
+  },
 ]
