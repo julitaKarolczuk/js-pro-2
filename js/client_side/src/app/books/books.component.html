@@ -3,36 +3,36 @@
 <div class="booksList mt-4 mb-4">
   <p-fieldset collapsed="false">
     <p-header>Dodaj książkę</p-header>
-
+ 
     <div class="col-sm-4 mr-auto ml-auto">
       <form #bookForm="ngForm" (ngSubmit)="createBook()">
-
+ 
         <div class="mt-4">
           <span class="ui-float-label">
             <input type="text" id="title-input"[(ngModel)]="bookToAdd.title" name="title" required pInputText>
             <label for="title-input">Ttytuł</label>
           </span>
         </div>
-
+ 
         <div class="mt-4">
           <p-multiSelect [options]="authorsSelect" defaultLabel="Wybierz autorów" [panelStyle]="{minWidth:'20px'}"
                          [(ngModel)]="bookToAdd.authors" name="auhtors" ></p-multiSelect>
         </div>
-
+ 
         <div class="mt-4">
           <span class="ui-float-label">
             <input type="text" id="country-input"[(ngModel)]="bookToAdd.country" name="country" required pInputText>
             <label for="country-input">Kraj</label>
           </span>
         </div>
-
+ 
         <div class="mt-4">
           <span class="ui-float-label">
             <input type="text" id="language-input"[(ngModel)]="bookToAdd.language" name="language" required pInputText>
             <label for="language-input">Język</label>
           </span>
         </div>
-
+ 
         <div class="mt-4">
           <span class="ui-float-label">
             <input type="text" id="pages-input"[(ngModel)]="bookToAdd.pages" name="pages" pInputText disabled required>
@@ -40,7 +40,7 @@
           </span>
           <p-slider [(ngModel)]="bookToAdd.pages" [min]="1" [max]="2000" name="pages" [style]="{'width':'200px'}"></p-slider>
         </div>
-
+ 
         <div class="mt-4">
           <span class="ui-float-label">
             <input type="text" id="year-input"[(ngModel)]="bookToAdd.year" name="year" pInputText disabled required>
@@ -48,31 +48,43 @@
           </span>
           <p-slider [(ngModel)]="bookToAdd.year" [min]="1" [max]="2018" name="year" [style]="{'width':'200px'}"></p-slider>
         </div>
-
+ 
         <div class="text-center mt-3">
           <button class="btn btn-success" type="submit" [disabled]="bookForm.invalid || isInvalid()" >Dodaj książkę <i class="fa fa-check-circle"></i></button>
         </div>
-
+ 
       </form>
     </div>
   </p-fieldset>
-
+ 
   <span class="ui-float-label mt-5">
     <input id="filter-input" type="text" [(ngModel)]="filter" (keyup)="filterBooks()" size="30" pInputText>
     <label for="filter-input">Filtruj po tytule</label>
   </span>
-
-  <ul class="books">
-    <li *ngFor="let book of pagedBooks | filterByTitle: filter">
-      <a routerLink="/books/{{book.bookId}}">
-        <span class="badge">{{book.bookId}}</span> {{book.title | uppercase}}
-      </a>
-      <button class="btn btn-danger pull-right" (click)="deleteBook(book)">Usuń <i class="fa fa-minus-circle"></i></button>
-    </li>
-  </ul>
-  <p-paginator rows="{{paginatorSettings.rows}}" totalRecords="{{paginatorSettings.totalRecords}}"
-               pageLinkSize="{{paginatorSettings.pageLinkSize}}" (onPageChange)="paginate($event)">
-  </p-paginator>
+  <div>
+  <table class="table table-responsive space">
+      <thead class="thead-dark">
+        <tr>
+            <th scope="col" (click)="sort('bookId')">Numer</th>
+            <th style="text-align:center" (click)="sort('title')">Tytuł</th>
+            <th (click)="sort('pages')">Liczba stron</th>
+            <th></th>
+        </tr> 
+      </thead>
+    <tbody>
+        <tr *ngFor="let book of allBooks">
+           
+              <th class="booktitle">{{book.bookId}}</th>
+              <th class="booktitle"><a routerLink="/books/{{book.bookId}}">{{book.title}}</a></th>
+              <th class="booktitle">{{book.pages}}</th>
+              <th>
+           <button class="btn btn-danger pull-right" (click)="deleteBook(book)">Usuń <i class="fa fa-minus-circle"></i></button>
+         </th>
+        </tr>
+    </tbody>  
+  </table>
 </div>
-
-
+  <img src="https://s3.pixers.pics/pixers/700/FO/38/64/48/29/700_FO38644829_ef10c099509f2f2b7e80c4cfa4ad9042.jpg" alt="tu powinien być obrazek"/>
+  <div style="clear:both">
+  </div>
+</div>

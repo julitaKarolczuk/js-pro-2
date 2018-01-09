@@ -22,7 +22,7 @@ export class AuthorsComponent implements OnInit {
 
   pagedAuthors: Author [] = [];
 
-  paginatorSettings = {rows: 2, pageLinkSize: 3, totalRecords: null};
+  paginatorSettings = {rows: 3, pageLinkSize: 3, totalRecords: null};
 
   filter: string;
 

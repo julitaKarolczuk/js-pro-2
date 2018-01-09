@@ -3,16 +3,12 @@ import {Book} from "../model/book";
 import {isNullOrUndefined} from "util";
 
 @Pipe({
-  name: 'filterByTitle'
+  name: 'filterByAuthor'
 })
-export class FilterByTitlePipe implements PipeTransform {
+export class FilterByAuthorPipe implements PipeTransform {
 
   transform(books: Book[], filter?: string): any {
     return isNullOrUndefined(filter) ? books : books.filter(function (book){
-    return book.title.toLowerCase().includes(filter.toLowerCase()); })
+    return book.author.toLowerCase().includes(filter.toLowerCase()); })
     }
   }
-
-
-
-

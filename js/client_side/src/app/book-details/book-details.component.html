@@ -70,7 +70,7 @@
             </tr>
             <tr>
               <th>Autorzy: </th>
-              <th *ngFor="let author of book.authors"> <a routerLink="/authors/{{author.authorId}}" title="Sprawdź szczegóły"> {{author.firstName}} {{author.lastName}}</a></th>
+              <th><div *ngFor="let author of book.authors"> <a routerLink="/authors/{{author.authorId}}" title="Sprawdź szczegóły"> {{author.firstName}} {{author.lastName}}</a></div></th>
             </tr>
             <tr>
               <th>Język:</th>

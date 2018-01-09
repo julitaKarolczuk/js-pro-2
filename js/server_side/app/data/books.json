@@ -64,7 +64,7 @@
     "year": 1836
   },
   {
-    "bookId": 4,
+    "bookId": 5,
     "authors": [
       {
       "authorId": 4,
@@ -80,7 +80,7 @@
     "year": 2010
   },
     {
-    "bookId": 5,
+    "bookId": 6,
     "authors": [
       {
       "authorId": 5,
@@ -96,7 +96,7 @@
     "year": 2017
   },
   {
-    "bookId": 6,
+    "bookId": 7,
     "authors": [
       {
       "authorId": 6,
@@ -112,7 +112,7 @@
     "year": 2012
   },
     {
-    "bookId": 7,
+    "bookId": 8,
     "authors": [
       {
       "authorId": 7,
@@ -128,7 +128,7 @@
     "year": 2012
   },
   {
-    "bookId": 8,
+    "bookId": 9,
     "authors": [
       {
       "authorId": 8,
@@ -144,7 +144,7 @@
     "year": 2011
   },
   {
-    "bookId": 9,
+    "bookId": 10,
     "authors": [
       {
       "authorId": 9,
@@ -160,7 +160,7 @@
     "year": 2012
   },
   {
-    "bookId": 10,
+    "bookId": 11,
     "authors": [
       {
       "authorId": 10,
@@ -176,7 +176,7 @@
     "year": 2016
   },
   {
-    "bookId": 9,
+    "bookId": 12,
     "authors": [
       {
       "authorId": 9,
@@ -190,5 +190,5 @@
     "pages": 456,
     "title": "JavaScript i jQuery. Nieoficjalny Podręcznik",
     "year": 2012
-  },
+  }
 ]
